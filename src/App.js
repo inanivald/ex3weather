@@ -27,6 +27,7 @@ class App extends React.Component {
 			console.log(data);
 			this.setState({
 				report: true,
+				city: this.state.city,
 				temp: data.main.temp,
 				humidity: data.main.humidity
 			})
@@ -59,7 +60,8 @@ class App extends React.Component {
 							<WeatherReport
 							city={this.state.city}
 							temp={this.state.temp}
-							humidity={this.state.humidity} />
+							humidity={this.state.humidity}
+							/>
 						)
 						: ''
 					}
